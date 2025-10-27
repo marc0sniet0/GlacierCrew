@@ -98,7 +98,7 @@ nav ul li a {
   left: 0;
   width: 100vw;
   height: 25vh;
-  margin-top: 8rem;
+  margin-top: 6rem;
   background: var(--bg-color-menu_text-color-dark);
   z-index: 990;
   justify-content: center;
@@ -175,11 +175,12 @@ nav ul li a {
 
 
 @media (max-width: 857px) {
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
  
 }
@@ -204,10 +205,10 @@ nav ul li a {
   }
 
   .tiempo h1 {
-  font-size: 3vw;
-}
+    font-size: 3vw;
+  }
 
-.tiempo h3 {
-  font-size: 2vw;
-}
+  .tiempo h3 {
+    font-size: 2vw;
+  }
 }
