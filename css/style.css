@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 /* VARIABLES */
 
 :root{
@@ -11,13 +13,24 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "Michroma", sans-serif;
     
 }
+
+h1{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1rem;
+}
+
 
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 6rem;
   background: var(--bg-color-menu_text-color-dark);
   color: var(--text-color-light);
   padding: 1rem;
@@ -105,7 +118,6 @@ nav ul li a {
 
 .mobile-menu ul li a {
   color: white;
-  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -114,13 +126,55 @@ nav ul li a {
   display: flex;
 }
 
+/* CUENTA ATRÁS */
+
+.cuenta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tiempo {
+  display: flex;
+  gap: 2rem;
+  color: var(--text-color-light);
+}
+
+.unidad {
+  text-align: center;
+}
+
+.unidad span {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-2);
+  font-weight: normal;
+}
+
+.tiempo h1 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: var(--text-color-light);
+  margin: 0;
+}
+
+.tiempo h3 {
+  font-size: 1vw;
+  font-weight: normal;
+  color: var(--text-color-light);
+  margin: 0;
+}
+
+
+
 
 
 
 /* MEDIAQUERIES----- */
 
 
-@media (max-width: 768px) {
+@media (max-width: 857px) {
     nav ul{
         display: flex;
         flex-direction: column;
@@ -131,7 +185,7 @@ nav ul li a {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 592px) {
   .main-header {
     flex-direction: column;
     justify-content: space-between;
@@ -148,4 +202,12 @@ nav ul li a {
   .mobile-menu.show {
     display: block;
   }
+
+  .tiempo h1 {
+  font-size: 3vw;
+}
+
+.tiempo h3 {
+  font-size: 2vw;
+}
 }
