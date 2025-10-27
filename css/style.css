@@ -1,3 +1,15 @@
-body{
-    background-color: aquamarine;
+/* VARIABLES */
+
+:root{
+    --text-color-light: rgb(255, 255, 255);
+    --bg-color-primary: rgb(200, 240, 255);
+    --bg-color-menu_text-color-dark: rgba(9, 51, 139, 0.521);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
 }
