@@ -31,10 +31,10 @@ document.addEventListener('click', function (event) {
 // CUENTA ATRÁS//
 
 const cuentaAtrasFecha = new Date();
-cuentaAtrasFecha.setDate(cuentaAtrasFecha.getDate() + 20);
-cuentaAtrasFecha.setHours(cuentaAtrasFecha.getHours() + 2);
-cuentaAtrasFecha.setMinutes(cuentaAtrasFecha.getMinutes() + 15);
-cuentaAtrasFecha.setSeconds(cuentaAtrasFecha.getSeconds() + 20);
+cuentaAtrasFecha.setDate(cuentaAtrasFecha.getDate() + 12);
+cuentaAtrasFecha.setHours(cuentaAtrasFecha.getHours() + 6);
+cuentaAtrasFecha.setMinutes(cuentaAtrasFecha.getMinutes() + 56);
+cuentaAtrasFecha.setSeconds(cuentaAtrasFecha.getSeconds() + 34);
 
 
   const interval = setInterval(() => {
