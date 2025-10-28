@@ -61,22 +61,45 @@ cuentaAtrasFecha.setSeconds(cuentaAtrasFecha.getSeconds() + 34);
 
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const cuentaContainer = document.querySelector('.cuenta-container');
+//   let lastScrollTop = 0;
+
+//   window.addEventListener('scroll', () => {
+//     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+//     if (currentScroll > lastScrollTop && currentScroll > 100) {
+    
+//       cuentaContainer.classList.add('hide');
+//     } else if (currentScroll < lastScrollTop) {
+      
+//       cuentaContainer.classList.remove('hide');
+//     }
+
+//     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', () => {
   const cuentaContainer = document.querySelector('.cuenta-container');
-  let lastScrollTop = 0;
+  let ocultado = false;
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScroll > lastScrollTop && currentScroll > 100) {
-    
+    if (!ocultado && currentScroll > 100) {
       cuentaContainer.classList.add('hide');
-    } else if (currentScroll < lastScrollTop) {
-      
-      cuentaContainer.classList.remove('hide');
+      ocultado = true;
     }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+    if (ocultado && currentScroll === 0) {
+      cuentaContainer.classList.remove('hide');
+      ocultado = false;
+    }
   });
 });
+
+
+
+
 
