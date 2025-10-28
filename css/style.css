@@ -179,7 +179,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6vh;
+  height: 15vh;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -194,6 +194,19 @@ nav ul li a {
 }
 
 .logo3D img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.big-foto{
+  display: flex;
+  height: 100vh;
+}
+
+.big-foto img{
   display: flex;
   justify-content: center;
   align-items: center;
