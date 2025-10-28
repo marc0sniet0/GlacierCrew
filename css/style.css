@@ -34,7 +34,8 @@ h3{
   background: var(--bg-color-menu_text-color-dark);
   color: var(--text-color-light);
   padding: 1rem;
-  position: relative;
+  width: 100%;
+  position: fixed;
   z-index: 999;
 }
 
@@ -70,11 +71,6 @@ nav ul li a {
   text-decoration: none;
 }
 
-.countdown span {
-  display: inline-block;
-  margin: 0 5px;
-  font-size: 1.2rem;
-}
 
 /* Botón menú móvil */
 .menu-toggle {
@@ -133,6 +129,13 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.cuenta-container.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .tiempo {
@@ -164,6 +167,12 @@ nav ul li a {
   font-weight: normal;
   color: var(--text-color-light);
   margin: 0;
+}
+
+.relleno{
+  height: 80rem;
+  width: 100%;
+  background-color: lightsteelblue;
 }
 
 

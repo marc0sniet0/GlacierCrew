@@ -58,3 +58,25 @@ cuentaAtrasFecha.setSeconds(cuentaAtrasFecha.getSeconds() + 34);
     document.getElementById("minutos").innerText = minutos;
     document.getElementById("segundos").innerText = segundos;
   }, 1000);
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cuentaContainer = document.querySelector('.cuenta-container');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+    
+      cuentaContainer.classList.add('hide');
+    } else if (currentScroll < lastScrollTop) {
+      
+      cuentaContainer.classList.remove('hide');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+  });
+});
+
