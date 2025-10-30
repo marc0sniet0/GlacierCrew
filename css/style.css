@@ -105,7 +105,7 @@ nav ul li a {
   left: 0;
   width: 100vw;
   height: 25vh;
-  margin-top: 6rem;
+  margin-top: 8rem;
   background: var(--bg-menu-gradient-reverse);
   z-index: 990;
   justify-content: center;
@@ -310,6 +310,10 @@ nav ul li a {
   .main-header {
     flex-direction: column;
     /* justify-content: space-between; */
+  }
+
+  .cuenta-container {
+  padding-bottom: 2.5rem;
   }
 
   #menu-inv {
