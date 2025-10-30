@@ -1,0 +1,124 @@
+/* Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --font-family: "Arial, sans-serif";
+    --input-padding: 10px;
+    --input-margin: 0.5rem 0 0 0;
+}
+
+/* Simple Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+main,
+footer {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--font-family);
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Styling the form inside #foodMenu */
+#foodMenu form {
+    max-width: 728px;
+    min-height: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family);
+    border: #3498db 1px solid;
+}
+
+#foodMenu form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--input-margin);
+    gap: 2rem;
+}
+
+#foodMenu form label {
+    font-size: 1.4rem;
+    width: 80%;
+    min-width: 5rem;
+    margin: var(--input-margin);
+    color: var(--primary-color);
+}
+
+#foodMenu form input[type="number"] {
+    font-size: 1.4rem;
+    width: 20%;
+    min-width: 3rem;
+    color: var(--primary-color);
+    padding: var(--input-padding);
+    margin: var(--input-margin);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#foodMenu form input[type="number"]:focus {
+    outline: none;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+
+#foodMenu form .total-price-cont {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 0 0;
+}
+
+#foodMenu form #buyFood.disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#foodMenu form .total-price-cont p {
+    color: var(--accent-color);
+}
+
+#foodMenu form input[type="submit"] {
+    padding: var(--input-padding);
+    margin: var(--input-margin);
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+    border: white 1px solid;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+#foodMenu form input[type="submit"]:hover {
+    background-color: white;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
