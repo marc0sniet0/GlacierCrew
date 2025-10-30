@@ -41,7 +41,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6rem;
+  height: 8.5rem;
   background: var(--bg-menu-gradient);
   color: var(--text-color-light);
   padding: 1rem;
@@ -93,18 +93,14 @@ nav ul li a {
 
 /* Menú desplegable móvil */
 
-.container-mobile-menu{
-    display: flex;
-    align-items: center;
-}
 
 .mobile-menu {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 25vh;
+  width: 100%;
+  height: 29vh;
   margin-top: 8rem;
   background: var(--bg-menu-gradient-reverse);
   z-index: 990;
@@ -113,6 +109,10 @@ nav ul li a {
 }
 
 .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -298,6 +298,13 @@ nav ul li a {
     flex-direction: column;
   }
 
+  .tiempo h1 {
+    font-size: 2rem;
+  }
+
+  .tiempo h3 {
+    font-size: 0.6rem;
+  }
 
 
  
@@ -311,7 +318,7 @@ nav ul li a {
   }
 
   .cuenta-container {
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.7rem;
   }
 
   #menu-inv {
@@ -327,10 +334,9 @@ nav ul li a {
   }
 
   .tiempo h1 {
-    font-size: 3vw;
+    font-size: 1.5rem;
   }
 
-  .tiempo h3 {
-    font-size: 2vw;
-  }
+ 
+
 }
