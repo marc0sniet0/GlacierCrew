@@ -279,8 +279,20 @@ nav ul li a {
   color: #000000;
 }
 
+/* BONOS */
+
+#bonos{
+  height: 80vh;
+  background-color: #000000;
+}
 
 
+/* ARTISTAS */
+
+#artistas{
+  height: 100vh;
+  background-color: var(--bg-color-menu_text-color-dark);
+}
 
 
 
