@@ -218,7 +218,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   height: 10.5vh;
-  margin-top: 3rem;
+  margin-top: 3.7rem;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -244,7 +244,7 @@ nav ul li a {
 /* INFO */
 
 #info {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,7 +268,7 @@ nav ul li a {
     padding: 1rem;
     gap: 4rem;
     align-items: center;
-    max-width: 1200px;
+    max-width: 40rem;
     flex-wrap: wrap;
     background-color: var(--bg-color-menu_text-color-dark);
     border-radius: 15px;
@@ -320,6 +320,31 @@ nav ul li a {
   display: flex;
   width: 25rem;
   height: auto;
+  position: relative;
+}
+
+.circ {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 9999;
+}
+
+.c1 {
+  left: 160px;
+  top: 200px;
+}
+
+.c2 {
+  left: 60px;
+  top: 440px;
+}
+
+.c3 {
+  left: 280px;
+  top: 550px;
 }
 
 .hielo-bonos img{
@@ -334,8 +359,19 @@ nav ul li a {
 /* ARTISTAS */
 
 #artistas{
-  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  height: 80vh;
   background-color: var(--bg-color-menu_text-color-dark);
+}
+
+.nom-artistas{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
 }
 
 
