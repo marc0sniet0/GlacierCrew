@@ -379,18 +379,38 @@ nav ul li a {
 
 #artistas{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   height: 80vh;
   background-color: var(--bg-color-menu_text-color-dark);
+}
+
+.imagen-artista{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .nom-artistas{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  height: 10rem;
+  width: 30rem;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-color-menu_text-color-dark);
+  border-radius: 15px;
 }
 
 .row{
   display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 
