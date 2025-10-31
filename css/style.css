@@ -42,7 +42,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8.5rem;
+  height: 7rem;
   background: var(--bg-menu-gradient);
   color: var(--text-color-light);
   padding: 1rem;
@@ -187,6 +187,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   height: 10.5vh;
+  margin-top: 3rem;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -196,7 +197,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6rem;
+  width: 11rem;
   /* height: 10rem; */
 }
 
@@ -332,6 +333,15 @@ nav ul li a {
     align-items: center;
   }
 
+  .logo-cont{
+    height: 9vh;
+    margin-top: 2.2rem;
+  }
+
+  .logo3D{
+    width: 8rem;
+  }
+
   #info {
     flex-direction: column;
   }
@@ -364,14 +374,21 @@ nav ul li a {
   }
 
   .cuenta-container {
-  padding-bottom: 1.7rem;
+    padding-bottom: 0.7rem;
   }
 
   .container-info-img{
-  width: 20rem;
-  
+    width: 20rem;
   }
 
+  .logo-cont{
+    height: 4vh;
+   
+  }
+
+  .logo3D{
+    width: 5.5rem;
+  }
 
   #menu-inv {
     display: none;
