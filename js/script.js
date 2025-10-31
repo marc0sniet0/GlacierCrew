@@ -81,6 +81,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// BOTÓN GIRATORIO//
+
+const button = document.querySelector('.logo3D');
+  let lastScrollTop = 0;
+  let scrollDirection = 1; 
+  let isScrolling = false;
+  let rotation = 0;
+  let animationFrameId;
+  let scrollTimeout;
+
+  function rotateButton() {
+    if (isScrolling) {
+      rotation += 3 * scrollDirection;
+      button.style.transform = `rotate(${rotation}deg)`;
+      animationFrameId = requestAnimationFrame(rotateButton);
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollDirection = scrollTop > lastScrollTop ? 1 : -1;
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+    if (!isScrolling) {
+      isScrolling = true;
+      rotateButton();
+    }
+
+   
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      isScrolling = false;
+      cancelAnimationFrame(animationFrameId);
+    }, 50);
+  });
+
+
+
+
 
 // COMPRAR ENTRADAS //
 

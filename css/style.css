@@ -29,6 +29,11 @@ h1{
   color: #ffffff;
 }
 
+h2{
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
 h3{
   font-size: 1rem;
 }
@@ -181,6 +186,32 @@ nav ul li a {
   margin: 0;
 }
 
+.contenedor-portada{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 99;
+}
+
+.big-foto{
+  display: flex;
+  height: 100vh;
+  z-index: 1;
+}
+
+.big-foto img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
 
 .logo-cont{
   display: flex;
@@ -209,20 +240,6 @@ nav ul li a {
   height: auto;
 }
 
-.big-foto{
-  display: flex;
-  height: 100vh;
-}
-
-.big-foto img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-}
 
 /* INFO */
 
