@@ -323,13 +323,19 @@ nav ul li a {
   position: relative;
 }
 
+.hielo-bonos img{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 .circ {
   position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: var(--text-color-light);
-  z-index: 9999;
+  z-index: 1;
 }
 
 .c1 {
@@ -366,11 +372,55 @@ nav ul li a {
   }
 }
 
-.hielo-bonos img{
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 100%;
+#modalWindow {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+
+    /* Esto permite animar la propiedad display de none a block */
+    transition: all 0.3s ease-in-out;
+    transition-behavior: allow-discrete;
+}
+
+#modalWindow.show-modal {
+    display: block;
+    opacity: 1;
+}
+
+#modalWindow .modal-content {
+    color: rgb(0, 29, 107);
+    background-color: aliceblue;
+    margin: 35% auto;
+    padding: 20px;
+    border: 1px solid black;
+    max-width: 564px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.4rem;
+}
+
+#modalWindow .modal-content h2 {
+    font-size: 2rem;
+}
+
+#modalWindow .modal-content .close {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 

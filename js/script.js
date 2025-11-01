@@ -117,6 +117,45 @@ const button = document.querySelector('.logo3D');
     }, 50);
   });
 
+// BONOS //
+
+document.addEventListener("DOMContentLoaded", () => {
+  const circles = document.querySelectorAll(".circ");
+  const modalWindow = document.querySelector("#modalWindow");
+  const modalTitle = document.querySelector("#modalTitle");
+  const modalText = document.querySelector("#modalText");
+  const buyButton = document.querySelector("#buyButton");
+  const btnCloseModal = modalWindow.querySelector(".close");
+
+  const openModalWindow = (circle) => {
+    const title = circle.dataset.title;
+    const text = circle.dataset.text;
+    const link = circle.dataset.link;
+
+    modalTitle.textContent = title;
+    modalText.textContent = text;
+    buyButton.href = link;
+
+    modalWindow.classList.add("show-modal");
+  };
+
+  const closeModalWindow = () => {
+    modalWindow.classList.remove("show-modal");
+  };
+
+  circles.forEach(circle => {
+    circle.addEventListener("click", () => openModalWindow(circle));
+  });
+
+  btnCloseModal.addEventListener("click", closeModalWindow);
+
+  window.addEventListener("click", event => {
+    if (event.target === modalWindow) closeModalWindow();
+  });
+});
+
+
+
 
 
 
