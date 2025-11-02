@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 /* VARIABLES */
 
@@ -16,8 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* font-family: "Michroma", sans-serif; */
-    font-family: "Montserrat", sans-serif;
+    font-family: "Zalando Sans Expanded", sans-serif;
 }
 
 body{
@@ -25,6 +25,7 @@ body{
 }
 
 h1{
+  font-family: "Rock Salt", cursive;
   font-size: 2rem;
   color: #ffffff;
 }
@@ -36,6 +37,12 @@ h2{
 
 h3{
   font-size: 1rem;
+}
+
+h4{
+  font-family: "Rock Salt", cursive;
+  font-size: 1.3rem;
+  color: #ffffff;
 }
 
 a{
@@ -195,6 +202,13 @@ nav ul li a {
   height: 100%;
   position: absolute;
   z-index: 99;
+}
+
+.lugar-fecha{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .big-foto{
@@ -372,6 +386,15 @@ nav ul li a {
   }
 }
 
+#modalWindow h1{
+  color: var(--bg-color-menu_text-color-dark);
+  padding-top: 0rem;
+}
+
+#modalText{
+  margin: 1rem 0;
+}
+
 #modalWindow {
     display: none;
     position: fixed;
@@ -397,7 +420,7 @@ nav ul li a {
 #modalWindow .modal-content {
     color: rgb(0, 29, 107);
     background-color: aliceblue;
-    margin: 35% auto;
+    margin: 20rem auto;
     padding: 20px;
     border: 1px solid black;
     max-width: 564px;
@@ -410,9 +433,6 @@ nav ul li a {
     gap: 1.4rem;
 }
 
-#modalWindow .modal-content h2 {
-    font-size: 2rem;
-}
 
 #modalWindow .modal-content .close {
     color: var(--accent-color);
@@ -489,7 +509,7 @@ nav ul li a {
   }
 
   .tiempo h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .tiempo h3 {
