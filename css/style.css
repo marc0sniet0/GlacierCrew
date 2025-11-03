@@ -453,6 +453,7 @@ nav ul li a {
   align-items: center;
   gap: 4.8rem;
   padding: 2rem;
+  min-height: 40rem;
 }
 
 .imagen-artista {
@@ -476,7 +477,7 @@ nav ul li a {
   background-color: var(--bg-color-menu_text-color-dark);
   padding: 1rem;
   border-radius: 20px;
-  width: 30rem;
+  width: 28rem;
   justify-content: center;
 }
 
@@ -499,6 +500,32 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: end;
+}
+
+/* PATROCINADORES */
+
+#patrocinadores{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  background-color: #000000;
+}
+
+.container-patro{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.container-patro img{
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 220px;
 }
 
 
@@ -534,7 +561,7 @@ nav ul li a {
     font-size: 0.6rem;
   }
 
-  #bonos h1{
+  #bonos h1, #patrocinadores h1, #artistas h1{
     font-size: 1.6rem;
   }
 
@@ -562,6 +589,10 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+  }
+
+  .container-patro{
+    grid-template-columns: repeat(3,1fr);
   }
 
   
@@ -610,7 +641,7 @@ nav ul li a {
     font-size: 1.5rem;
   }
 
-  #bonos h1{
+  #bonos h1, #patrocinadores h1, #artistas h1{
   font-size: 1.3rem;
   }
 
@@ -635,6 +666,10 @@ nav ul li a {
 
   .lista-artistas {
     width: 20rem;
+  }
+
+  .container-patro{
+    grid-template-columns: repeat(2,1fr);
   }
 
  
