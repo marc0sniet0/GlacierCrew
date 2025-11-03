@@ -155,6 +155,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ARTISTAS //
+
+const artistas = document.querySelectorAll('.artista');
+const imagen = document.getElementById('imagen');
+
+artistas.forEach(artista => {
+  artista.addEventListener('click', () => {
+    // Cambiar imagen
+    const nuevaImagen = artista.getAttribute('data-img');
+    imagen.setAttribute('src', nuevaImagen);
+
+    // Quitar clase activa de todos
+    artistas.forEach(a => a.classList.remove('activo'));
+
+    // Añadir clase activa al seleccionado
+    artista.classList.add('activo');
+  });
+});
+
+
 
 
 

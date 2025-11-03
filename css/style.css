@@ -447,40 +447,58 @@ nav ul li a {
 
 /* ARTISTAS */
 
-#artistas{
+#artistas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+  padding: 2rem;
+}
+
+.imagen-artista {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.imagen-artista img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lista-artistas {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 80vh;
-  background-color: var(--bg-color-menu_text-color-dark);
-}
-
-.imagen-artista{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.nom-artistas{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  height: 10rem;
-  width: 30rem;
   gap: 1rem;
-  padding: 1rem;
   background-color: var(--bg-color-menu_text-color-dark);
-  border-radius: 15px;
+  padding: 1rem;
+  border-radius: 20px;
+  width: 30rem;
+  justify-content: center;
 }
 
-.row{
+.artista {
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: normal;
+  transition: font-weight 0.2s ease;
+}
+
+.artista:hover {
+  text-decoration: underline;
+}
+
+.artista.activo {
+  font-weight: bold;
+}
+
+.cont-list-art{
   display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: end;
 }
 
 
@@ -538,6 +556,15 @@ nav ul li a {
     left: 260px;
     top: 500px;
   }
+
+  #artistas {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  
 
 
  
@@ -604,6 +631,10 @@ nav ul li a {
   .c3 {
     left: 220px;
     top: 440px;
+  }
+
+  .lista-artistas {
+    width: 20rem;
   }
 
  
