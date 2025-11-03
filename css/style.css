@@ -384,6 +384,11 @@ nav ul li a {
   }
 }
 
+.buy-button{
+  color: var(--bg-color-menu_text-color-dark);
+  margin-bottom: 2rem;
+}
+
 #modalWindow h1{
   color: var(--bg-color-menu_text-color-dark);
   padding-top: 0rem;
