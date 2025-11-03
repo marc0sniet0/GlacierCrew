@@ -7,8 +7,8 @@
 :root{
     --text-color-light: rgb(255, 255, 255);
     --bg-color-primary: rgb(200, 240, 255);
-    --bg-color-menu_text-color-dark: rgba(6, 33, 90, 0.493);
-    --bg-menu-gradient: linear-gradient(to top, #ffffff00, #000f41);
+    --bg-color-menu_text-color-dark: rgba(24, 118, 173, 0.75);
+    --bg-menu-gradient: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(16, 74, 107, 0.75));
     --bg-menu-gradient-reverse: linear-gradient(to bottom, #ffffff00, #000f418c);
 }
 
@@ -20,9 +20,7 @@
     font-family: "Zalando Sans Expanded", sans-serif;
 }
 
-body{
-  background-color: var(--bg-color-menu_text-color-dark);
-}
+
 
 h1{
   font-family: "Rock Salt", cursive;
@@ -592,6 +590,31 @@ footer {
 }
 
 
+#parallax{
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+#parallax img, .difuse{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#parallax img{
+  z-index: -2;
+}
+
+.difuse{
+  z-index: -1;
+  background-color: var(--bg-color-menu_text-color-dark);
+}
 
 /* MEDIAQUERIES----- */
 
