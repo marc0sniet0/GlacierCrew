@@ -5,75 +5,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>MENU TOTAL PRICE</title>
         <link rel="stylesheet" href="css/entradas.css" />
+
+        <!-- ICONOS FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
-            <h1>Choose your food menu!</h1>
-            <p>You can add different quantities for each item</p>
+            <div class="logo-cont">
+                <a href="index.html" class="logo3D">
+                    <img src="media/icecube.png" alt="logo 3D">
+                </a>
+            </div>
+            <h1>Compra tus entradas!</h1>
         </header>
         <main>
             <section id="foodMenu">
                 <form action="">
                     <div>
-                        <label for="burger">Burger - 7.9€</label>
+                        <label for="1-dia">Bono 1 dia (14.9€)</label>
                         <input
                             type="number"
-                            name="burger"
-                            id="burger"
+                            name="1-dia"
+                            id="1-dia"
                             min="0"
                             value="0"
-                            data-price="7.9" />
+                            data-price="14.9" />
                     </div>
                     <div>
-                        <label for="pizza">Pizza - 12.30€</label>
+                        <label for="2-dias">Bono 2 dias (26.9€)</label>
                         <input
                             type="number"
-                            name="pizza"
-                            id="pizza"
+                            name="2-dias"
+                            id="2-dias"
                             min="0"
                             value="0"
-                            data-price="12.30" />
+                            data-price="26.9" />
                     </div>
                     <div>
-                        <label for="salad">Salad - 6€</label>
+                        <label for="VIP">Bono VIP (37.9€)</label>
                         <input
                             type="number"
-                            name="salad"
-                            id="salad"
+                            name="VIP"
+                            id="VIP"
                             min="0"
                             value="0"
-                            data-price="6" />
-                    </div>
-                    <div>
-                        <label for="drink">Drink - 3.50€</label>
-                        <input
-                            type="number"
-                            name="drink"
-                            id="drink"
-                            min="0"
-                            value="0"
-                            data-price="3.50" />
-                    </div>
-                    <div>
-                        <label for="dessert">Dessert - 5€</label>
-                        <input
-                            type="number"
-                            name="dessert"
-                            id="dessert"
-                            min="0"
-                            value="0"
-                            data-price="5" />
+                            data-price="37.9" />
                     </div>
                     <div class="total-price-cont">
-                        <p>Total price:</p>
+                        <p>Precio Total:</p>
                         <p id="totalPrice"></p>
                     </div>
-                    <input id="buyFood" type="submit" value="Buy food menu!" class="disabled" />
+                    <input id="buyFood" type="submit" value="Comprar Ya" class="disabled" />
                 </form>
             </section>
         </main>
         <footer>
-            <p>Food menu calculator by <a href="mailto:adrian.cano@udit.es">Adrián Cano</a></p>
+            <div class="footer-info">
+                <div class="footer-top">
+                    <div class="footer-col1">
+                        <h1>GlacierCrew</h1>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/"  target="_blank">
+                            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                        </a>
+
+                        <a href="https://es.linkedin.com/school/udituniversidad/"  target="_blank">
+                            <i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@udit_es?_t=ZN-8vHM9DxQa8M&_r=1"  target="_blank">
+                            <i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>
+                        </a>
+                    </div>
+                
+                </div>
+
+                <div class="footer-rw1">
+                    <div class="footer-links">
+                        <a href="#">Política de Privacidad</a>
+                        <a href="#">Aviso Legal</a>
+                        <a href="#">Configuración de Cookies</a>
+                        <a href="#">©2026 GlacierCrew</a>
+                    </div> 
+                </div>
+            </div>
         </footer>
 
         <script src="js/script.js"></script>

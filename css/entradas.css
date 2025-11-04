@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 /* Variables */
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
+    --primary-color: rgba(24, 118, 173, 0.75);
+    --secondary-color: rgb(47, 83, 96);
     --accent-color: #e74c3c;
     --font-family: "Arial, sans-serif";
     --input-padding: 10px;
     --input-margin: 0.5rem 0 0 0;
 }
 
-/* Simple Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Zalando Sans Expanded", sans-serif;
 }
 
 header,
@@ -25,21 +29,46 @@ footer {
     align-items: center;
 }
 
-h1 {
-    font-family: var(--font-family);
-    font-size: 2.4rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+h1{
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  color: rgba(24, 118, 173, 0.75);
 }
 
-p {
-    font-family: var(--font-family);
-    font-size: 1.6rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.logo-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  pointer-events: none;
 }
 
-/* Styling the form inside #foodMenu */
+.logo3D{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  pointer-events: none;
+
+  /* height: 10rem; */
+}
+
+.logo3D img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  pointer-events: auto;
+}
+
+#foodMenu{
+    padding-bottom: 4rem;
+}
+
 #foodMenu form {
     max-width: 728px;
     min-height: fit-content;
@@ -100,6 +129,7 @@ p {
 
 #foodMenu form .total-price-cont p {
     color: var(--accent-color);
+    font-size: 1.4rem;
 }
 
 #foodMenu form input[type="submit"] {
@@ -122,3 +152,203 @@ p {
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
 }
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    /* position: fixed;
+    bottom: 0; */
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3rem;
+    align-items: center;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.footer-col1 img {
+    width: 300px;
+}
+
+.social-icons > a {
+    text-decoration: none;
+}
+
+.social-icons {
+    font-size: 1.5rem;
+    justify-content: center;
+    gap: 6rem;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer-rw1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-links > a,
+.footer-rw1 > p {
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* MEDIAQUERIES */
+
+@media (max-width: 857px) {
+    header{
+        gap: 1rem;
+    }
+
+    .logo-cont{
+        height: 9vh;
+        margin-top: 2.2rem;
+    }
+
+    .logo3D{
+        width: 8rem;
+    }
+
+    h1{
+    font-size: 1.5rem;
+    }
+
+    #foodMenu form label {
+        font-size: 1rem;
+    }
+
+    #foodMenu form input[type="number"] {
+    font-size: 1rem;
+    }
+
+    #foodMenu form .total-price-cont p {
+    font-size: 1.2rem;
+    }
+
+    .footer-links > a,
+    .footer-rw1 > p {
+        font-size: 0.7rem;   
+    }
+
+    #foodMenu form input[type="submit"] {
+    font-size: 1.2rem;
+    }
+
+
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 592px) {
+  .logo-cont{
+    height: 6vh;
+   
+  }
+
+  .logo3D{
+    width: 5.5rem;
+  }
+
+  #foodMenu form .total-price-cont p {
+    font-size: 0.8rem;
+    }
+
+    #foodMenu form input[type="submit"] {
+    font-size: 1rem;
+    }
+
+     h1{
+    font-size: 1.2rem;
+    }
+
+
+  .footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .social-icons {
+    font-size: 2rem;
+    gap: 2rem;
+  }
+
+  .footer-rw1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  
+}
+
+

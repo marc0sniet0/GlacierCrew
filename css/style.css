@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 /* VARIABLES */
@@ -234,6 +233,7 @@ nav ul li a {
   position: sticky;
   top: 0;
   z-index: 99999;
+  pointer-events: none;
 }
 
 .logo3D{
@@ -241,6 +241,8 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   width: 11rem;
+  pointer-events: none;
+
   /* height: 10rem; */
 }
 
@@ -250,6 +252,7 @@ nav ul li a {
   align-items: center;
   width: 100%;
   height: auto;
+  pointer-events: auto;
 }
 
 
@@ -705,11 +708,6 @@ footer {
     align-items: center;
     gap: 3rem;
   }
-
-  
-
-
- 
 }
 
 
