@@ -1,10 +1,28 @@
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f5f5f5;
-  color: #000;
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/* VARIABLES */
+
+:root{
+    --text-color-light: rgb(255, 255, 255);
+    --bg-color-primary: rgb(200, 240, 255);
+    --bg-color-menu_text-color-dark: rgba(24, 118, 173, 0.75);
+    --bg-menu-gradient: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(16, 74, 107, 0.75));
+    --bg-menu-gradient-reverse: linear-gradient(to bottom, #ffffff00, #000f418c);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+
+
+
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -21,7 +39,7 @@ h2, h3 {
 }
 label {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: .5rem;
 }
 input, select {
@@ -37,22 +55,23 @@ input, select {
   cursor: pointer;
   font-size: 1rem;
   padding: .75rem 1rem;
-  border-radius: 999px;
-  border: 2px solid #000;
+  border-radius: 10px;
+  border: 2px solid #2f5360;
   background: none;
-  color: #000;
+  color:#2f5360;
+;
   transition: background .2s, color .2s;
 }
 .btn:hover {
   background: #f0f0f0;
 }
 .btn--primary {
-  background: #000;
+  background: #2f5360;
   color: #fff;
 }
 .btn--primary:hover {
   background: #fff;
-  color: #000;
+  color: #2f5360;
 }
 .btn--link {
   background: none;
@@ -104,8 +123,15 @@ input[type=checkbox] {
 }
 .card__label {
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 0.9rem;
 }
+
+.card__subtitle{
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
 .card-logo {
   position: absolute;
   top: 2.05rem;
