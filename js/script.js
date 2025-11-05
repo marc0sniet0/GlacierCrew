@@ -185,38 +185,46 @@ artistas.forEach(artista => {
 document.addEventListener("DOMContentLoaded", function () {
     const inputs = document.querySelectorAll('input[type="number"]');
     const totalPriceElement = document.getElementById("totalPrice");
-
-    // Añade a cada input un evento change para calcular el precio total
-    inputs.forEach((input) => {
-        input.addEventListener("change", calculateTotalPrice);
-    });
+    const buyButton = document.getElementById("buyFood");
 
     // Función para calcular el precio total
     function calculateTotalPrice() {
         let totalPrice = 0;
+
         inputs.forEach((input) => {
             const price = parseFloat(input.dataset.price) || 0;
             const quantity = parseInt(input.value) || 0;
             totalPrice += price * quantity;
-
-            // Si el precio es mayor que 0, se habilita el botón de comprar
-            if (totalPrice > 0) {
-                document.getElementById("buyFood").classList.remove("disabled");
-            } else {
-                document.getElementById("buyFood").classList.add("disabled");
-            }
         });
+
+        // Actualiza el precio en pantalla
         totalPriceElement.textContent = totalPrice.toFixed(2) + " €";
+
+        // Habilita o deshabilita el botón según el total
+        if (totalPrice > 0) {
+            buyButton.classList.remove("disabled");
+        } else {
+            buyButton.classList.add("disabled");
+        }
     }
 
-    // La primera llamada a la función hará el calculo inicial para poner 0.00 €
+    // Añade eventos a cada input para recalcular el total
+    inputs.forEach((input) => {
+        input.addEventListener("change", calculateTotalPrice);
+    });
+
+    // Cálculo inicial
     calculateTotalPrice();
 
-    // Evitar el envio del formulario si el usuario pulsa enter o el precio es 0
-    document.getElementById("form").addEventListener("submit", function (event) {
-        event.preventDefault();
+    // Redirigir al hacer clic si el botón está habilitado
+    buyButton.addEventListener("click", function () {
+        if (!buyButton.classList.contains("disabled")) {
+            window.location.href = "../datos_compra.html"; // ← cambia esto por tu página destino
+        }
     });
 });
+
+
 
 
 

@@ -132,7 +132,7 @@ h1{
     font-size: 1.4rem;
 }
 
-#foodMenu form input[type="submit"] {
+#foodMenu form input[type="button"] {
     padding: var(--input-padding);
     margin: var(--input-margin);
     background-color: var(--secondary-color);
@@ -147,7 +147,12 @@ h1{
     font-size: 1.4rem;
 }
 
-#foodMenu form input[type="submit"]:hover {
+#foodMenu form input.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#foodMenu form input[type="button"]:hover {
     background-color: white;
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);

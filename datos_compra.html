@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MENU TOTAL PRICE</title>
+        <link rel="stylesheet" href="css/entradas.css" />
+        <link rel="GlacierCrew icon" href="media/logo-buscador.png" type="image/svg">
+
+        <!-- ICONOS FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="container">
+            <a href="entradas.html" class="btn--link">&larr; Volver</a>
+
+            <div class="checkout__content">
+            <!-- IZQUIERDA: FORMULARIO -->
+            <div class="checkout__left">
+                <!-- CONTACTO -->
+                <section class="section">
+                <h2>Contacto</h2>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="Correo electrónico">
+                
+                </section>
+
+                <!-- PAGO -->
+                <section class="section section--pago">
+                <h2>Pago</h2>
+                <div class="card">
+                    <label class="card__label">Tarjeta de crédito</label>
+                    <div class="card-logo">
+                    <!-- Rutas a tus imágenes -->
+                    <img src="Media/Foto/visa.webp" alt="Visa">
+                    <img src="Media/Foto/mastercard.webp" alt="MasterCard">
+                    </div>
+
+                    <label for="card-number">Número de tarjeta</label>
+                    <input type="text" id="card-number" placeholder="Número de tarjeta">
+
+                    <div class="row">
+                    <div>
+                        <label for="expiry">Fecha de vencimiento (MM/AA)</label>
+                        <input type="text" id="expiry" placeholder="MM/AA">
+                    </div>
+                    <div>
+                        <label for="cvc">Código de seguridad</label>
+                        <input type="text" id="cvc" placeholder="CVC">
+                    </div>
+                    </div>
+
+                    <label for="card-name">Nombre del titular</label>
+                    <input type="text" id="card-name" placeholder="Nombre del titular">
+
+                    <h3 class="card__subtitle">Dirección de facturación</h3>
+
+                    <label for="country-bill">País / Región</label>
+                    <select id="country-bill">
+                    <option>España</option>
+                    </select>
+
+                    <div class="row">
+                    <div>
+                        <label for="bill-name">Nombre</label>
+                        <input type="text" id="bill-name" placeholder="Nombre">
+                    </div>
+                    <div>
+                        <label for="bill-last">Apellidos</label>
+                        <input type="text" id="bill-last" placeholder="Apellidos">
+                    </div>
+                    </div>
+
+                    <label for="company">Empresa (opcional)</label>
+                    <input type="text" id="company" placeholder="Empresa (opcional)">
+
+                    <label for="address1">Dirección</label>
+                    <input type="text" id="address1" placeholder="Dirección">
+
+                    <label for="address2">Casa, apartamento, bloque, etc.</label>
+                    <input type="text" id="address2" placeholder="Casa, apartamento, bloque, etc.">
+
+                    <div class="row">
+                    <div>
+                        <label for="postal">Código postal</label>
+                        <input type="text" id="postal" placeholder="Código postal">
+                    </div>
+                    <div>
+                        <label for="city">Ciudad</label>
+                        <input type="text" id="city" placeholder="Ciudad">
+                    </div>
+                    <div>
+                        <label for="country2">País / Región</label>
+                        <select id="country2">
+                        <option>España</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <label for="phone">Teléfono (opcional)</label>
+                    <input type="tel" id="phone" placeholder="Teléfono (opcional)">
+                </div>
+                </section>
+
+                
+
+                <!-- BOTÓN FINAL -->
+                <button class="btn btn--primary btn--full" onclick="location.href='index.html'">
+                Pagar ahora
+                </button>
+            </div>
+
+            <!-- DERECHA: DESCUENTO Y RESUMEN -->
+            <div class="checkout__right">
+                <div class="section summary">
+                <label for="discount">Código de descuento</label>
+                <div class="row row--no-wrap">
+                    <input type="text" id="discount" placeholder="Código de descuento">
+                    <button class="btn">Aplicar</button>
+                </div>
+                <div class="summary__field">
+                    <span>Subtotal</span><span>00,00€</span>
+                </div>
+                <div class="summary__field summary__field--total">
+                    <span>Total</span><span>00,00€</span>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
