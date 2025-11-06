@@ -171,10 +171,6 @@ artistas.forEach(artista => {
 
 
 
-
-
-
-
 // COMPRAR ENTRADAS //
 
 document.addEventListener("DOMContentLoaded", function () {
