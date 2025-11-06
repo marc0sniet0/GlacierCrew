@@ -162,14 +162,9 @@ const imagen = document.getElementById('imagen');
 
 artistas.forEach(artista => {
   artista.addEventListener('click', () => {
-    // Cambiar imagen
     const nuevaImagen = artista.getAttribute('data-img');
     imagen.setAttribute('src', nuevaImagen);
-
-    // Quitar clase activa de todos
     artistas.forEach(a => a.classList.remove('activo'));
-
-    // Añadir clase activa al seleccionado
     artista.classList.add('activo');
   });
 });
@@ -187,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalPriceElement = document.getElementById("totalPrice");
     const buyButton = document.getElementById("buyFood");
 
-    // Función para calcular el precio total
     function calculateTotalPrice() {
         let totalPrice = 0;
 
@@ -197,10 +191,9 @@ document.addEventListener("DOMContentLoaded", function () {
             totalPrice += price * quantity;
         });
 
-        // Actualiza el precio en pantalla
+
         totalPriceElement.textContent = totalPrice.toFixed(2) + " €";
 
-        // Habilita o deshabilita el botón según el total
         if (totalPrice > 0) {
             buyButton.classList.remove("disabled");
         } else {
@@ -208,18 +201,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Añade eventos a cada input para recalcular el total
+    
     inputs.forEach((input) => {
         input.addEventListener("change", calculateTotalPrice);
     });
-
-    // Cálculo inicial
     calculateTotalPrice();
-
-    // Redirigir al hacer clic si el botón está habilitado
     buyButton.addEventListener("click", function () {
         if (!buyButton.classList.contains("disabled")) {
-            window.location.href = "../datos_compra.html"; // ← cambia esto por tu página destino
+            window.location.href = "../datos_compra.html"; 
         }
     });
 });
@@ -281,7 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // ✅ Redirección manual si todo está correcto
     alert('Pago procesado correctamente. ¡Gracias por tu compra!');
     window.location.href = 'index.html';
   });
