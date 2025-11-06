@@ -225,6 +225,72 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// FORMULARIO FINAL
+
+document.addEventListener('DOMContentLoaded', function () {
+  const pagarBtn = document.querySelector('.btn--primary');
+
+  pagarBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const camposObligatorios = [
+      'email',
+      'card-number',
+      'expiry',
+      'cvc',
+      'card-name',
+      'bill-name',
+      'bill-last',
+      'address1',
+      'postal',
+      'city'
+    ];
+
+    const errores = [];
+
+    camposObligatorios.forEach(id => {
+      const campo = document.getElementById(id);
+      if (!campo || campo.value.trim() === '') {
+        errores.push(`El campo "${campo.placeholder || id}" es obligatorio.`);
+      }
+    });
+
+    const email = document.getElementById('email').value.trim();
+    const cardNumber = document.getElementById('card-number').value.trim();
+    const expiry = document.getElementById('expiry').value.trim();
+    const cvc = document.getElementById('cvc').value.trim();
+
+    if (!email.includes('@') || !email.includes('.')) {
+      errores.push('Introduce un correo electrónico válido.');
+    }
+
+    if (!/^\d{16}$/.test(cardNumber)) {
+      errores.push('El número de tarjeta debe tener 16 dígitos.');
+    }
+
+    if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+      errores.push('La fecha de vencimiento debe tener el formato MM/AA.');
+    }
+
+    if (!/^\d{3}$/.test(cvc)) {
+      errores.push('El CVC debe tener 3 dígitos.');
+    }
+
+    if (errores.length > 0) {
+      alert('Corrige los siguientes errores:\n\n' + errores.join('\n'));
+      return;
+    }
+
+    // ✅ Redirección manual si todo está correcto
+    alert('Pago procesado correctamente. ¡Gracias por tu compra!');
+    window.location.href = 'index.html';
+  });
+});
+
+
+
+
+
 
 
 
